@@ -1,0 +1,923 @@
+{
+  "version": "1.5.0",
+  "updated_utc": "2025-09-30T10:21:04.977179+00:00",
+  "domain": "Third Wave Coffee (TWC)",
+  "roles": {
+    "barista": {
+      "aliases": [
+        "barista",
+        "café staff",
+        "partner"
+      ],
+      "theme_reference": [
+        "workload_staffing",
+        "training_onboarding",
+        "recognition_respect"
+      ]
+    },
+    "buddy_trainer": {
+      "aliases": [
+        "buddy",
+        "buddy trainer"
+      ],
+      "theme_reference": [
+        "training_onboarding",
+        "growth_progression",
+        "recognition_respect"
+      ]
+    },
+    "shift_manager": {
+      "aliases": [
+        "shift lead",
+        "shift manager",
+        "floor lead"
+      ],
+      "theme_reference": [
+        "manager_team_dynamics",
+        "empowerment_ownership",
+        "growth_progression"
+      ]
+    },
+    "area_manager": {
+      "aliases": [
+        "am",
+        "area manager"
+      ],
+      "theme_reference": [
+        "manager_team_dynamics",
+        "workload_staffing"
+      ]
+    },
+    "regional_manager": {
+      "aliases": [
+        "rm",
+        "regional manager"
+      ],
+      "theme_reference": [
+        "manager_team_dynamics",
+        "growth_progression"
+      ]
+    },
+    "hrbp": {
+      "aliases": [
+        "hr",
+        "hrbp",
+        "hr partner"
+      ],
+      "theme_reference": [
+        "communication_clarity",
+        "overall_satisfaction"
+      ]
+    },
+    "hr_head": {
+      "aliases": [
+        "hr head",
+        "head of hr"
+      ],
+      "theme_reference": [
+        "communication_clarity"
+      ]
+    },
+    "trainer_ld": {
+      "aliases": [
+        "trainer",
+        "learning manager",
+        "l&d"
+      ],
+      "theme_reference": [
+        "training_onboarding"
+      ]
+    }
+  },
+  "programs": {
+    "respect_values": {
+      "aliases": [
+        "respect",
+        "respect badge",
+        "badges",
+        "values"
+      ],
+      "theme_reference": [
+        "recognition_respect"
+      ],
+      "description": "Core TWC value framework with digital badges for Responsibility, Empathy, Service Excellence, Performance with Purpose, Ethics, Collaboration, Trust."
+    },
+    "orientation_online": {
+      "aliases": [
+        "orientation",
+        "online orientation",
+        "induction"
+      ],
+      "theme_reference": [
+        "training_onboarding"
+      ],
+      "description": "Digital onboarding program for new hires, hosted on ZingLearn."
+    },
+    "zinglms": {
+      "aliases": [
+        "zinglms",
+        "zing learn",
+        "zinglearn",
+        "lms",
+        "training app"
+      ],
+      "theme_reference": [
+        "training_onboarding",
+        "communication_clarity"
+      ],
+      "description": "TWC’s digital learning & communication platform."
+    },
+    "bench_planning": {
+      "aliases": [
+        "bench planning",
+        "talent bench",
+        "pipeline",
+        "succession"
+      ],
+      "theme_reference": [
+        "growth_progression"
+      ],
+      "description": "Manager-specific program to prepare team members for future leadership roles."
+    },
+    "hr_connect": {
+      "aliases": [
+        "hr connect",
+        "connect call",
+        "check-in"
+      ],
+      "theme_reference": [
+        "overall_satisfaction"
+      ],
+      "description": "15-minute one-on-one conversation between HR and employees."
+    }
+  },
+  "stores": {
+    "id_format_regex": "^S\\d{3}$",
+    "examples": [
+      {
+        "store_id": "S056",
+        "location": "Mall of India",
+        "region": "North"
+      },
+      {
+        "store_id": "S016",
+        "location": "Jayanagar",
+        "region": "South"
+      },
+      {
+        "store_id": "S153",
+        "location": "Lajpat Nagar",
+        "region": "North"
+      }
+    ],
+    "theme_reference": [
+      "workload_staffing",
+      "manager_team_dynamics"
+    ]
+  },
+  "people": [
+    {
+      "id": "h1355",
+      "name": "Suresh",
+      "role": "Area Manager",
+      "region": "South"
+    },
+    {
+      "id": "h546",
+      "name": "Ajay H",
+      "role": "Area Manager",
+      "region": "North"
+    },
+    {
+      "id": "h2595",
+      "name": "Kailash",
+      "role": "Trainer (L&D)",
+      "region": "North"
+    },
+    {
+      "id": null,
+      "name": "Anaya",
+      "role": "Buddy Trainer",
+      "region": "All"
+    },
+    {
+      "id": null,
+      "name": "Arjun",
+      "role": "Barista",
+      "region": "All"
+    }
+  ],
+  "policies": {
+    "metadata": {
+      "source_batch": "HR_PDF_SET_2025_09",
+      "doc_count_expected": 10,
+      "ingestion_notes": "Each clause must include policy_id and section; store page spans when extracted. Agent must cite policy_id/section in answers.",
+      "default_citation_format": "[{policy_id} §{section}]"
+    },
+    "catalog": [
+      {
+        "category": "code_of_conduct",
+        "policy_id": "POL-COND-001",
+        "title": "Code of Conduct & Ethics",
+        "effective_from": "2023-02-15",
+        "owner_role": "HR",
+        "applies_to_roles": [
+          "all"
+        ],
+        "summary": "Ethical standards; reporting concerns; no retaliation; non‑discrimination; anti‑harassment; conflict of interest; protection of assets.",
+        "sections": [
+          {
+            "section": "1",
+            "heading": "Introduction & Expectations",
+            "pages": "1-2"
+          },
+          {
+            "section": "2",
+            "heading": "Reporting & Non-retaliation",
+            "pages": "3-4"
+          },
+          {
+            "section": "3.1",
+            "heading": "Non-discrimination & Harassment",
+            "pages": "5-6"
+          },
+          {
+            "section": "3.2",
+            "heading": "Integrity & Conflicts",
+            "pages": "7-8"
+          }
+        ],
+        "faq": [
+          {
+            "q": "How do I report a CoC breach?",
+            "a": "Use manager → HRBP → Whistleblower as per escalation. Sexual harassment goes to ICC/IC as per POSH."
+          }
+        ],
+        "references": [
+          {
+            "pdf": "Code of Conduct revised.pdf"
+          }
+        ],
+        "last_reviewed": "TBD",
+        "qa": [
+          {
+            "q": "How do I report harassment?",
+            "a": "You must report via your Manager → HRBP → Whistleblower, or ICC for sexual harassment [POL-COND-001 §2]."
+          },
+          {
+            "q": "Can I use company property for personal use?",
+            "a": "No, misuse of assets is prohibited under Integrity [POL-COND-001 §3.2]."
+          }
+        ]
+      },
+      {
+        "policy_id": "POL-FAQ-015",
+        "title": "HR FAQs",
+        "references": [
+          {
+            "pdf": "HR FAQs (1).pdf"
+          }
+        ],
+        "sections": [
+          {
+            "section": "zing",
+            "heading": "Zing HR & Attendance",
+            "pages": "1-2"
+          },
+          {
+            "section": "payroll",
+            "heading": "Payroll & Leaves",
+            "pages": "3-4"
+          },
+          {
+            "section": "meal",
+            "heading": "Meal Activation",
+            "pages": "5"
+          },
+          {
+            "section": "respect",
+            "heading": "RESPECT Program",
+            "pages": "6"
+          }
+        ],
+        "qa": [
+          {
+            "q": "How many attendance regularizations are allowed?",
+            "a": "You may submit 4 regularizations per month within 7 days [POL-FAQ-015 §zing]."
+          },
+          {
+            "q": "When is F&F settlement processed?",
+            "a": "Within 45 days of last working day [POL-FAQ-015 §payroll]."
+          }
+        ]
+      },
+      {
+        "category": "attendance_leave",
+        "policy_id": "POL-LEAVE-002",
+        "title": "Leave Policy",
+        "effective_from": "2023-02-15",
+        "owner_role": "HRBP",
+        "applies_to_roles": [
+          "all"
+        ],
+        "summary": "Calendar leave cycle (Jan–Dec). EL 24 (carry forward 7, encash on exit), Flexi Leave 12–14 (mix of SL/CL/Wellness/Celebratory/Bereavement), Maternity 26 weeks, Paternity 4–7 days, Adoption up to 6 months (age‑based). Apply via HRMS and manager approval.",
+        "sections": [
+          {
+            "section": "EL",
+            "heading": "Earned Leave",
+            "pages": "2-3"
+          },
+          {
+            "section": "FL",
+            "heading": "Flexi Leave",
+            "pages": "4-5"
+          },
+          {
+            "section": "MAT",
+            "heading": "Maternity Leave",
+            "pages": "6-7"
+          }
+        ],
+        "references": [
+          {
+            "pdf": "Leave Policy - Store.pdf"
+          }
+        ],
+        "last_reviewed": "TBD",
+        "qa": [
+          {
+            "q": "How many EL can I carry forward?",
+            "a": "You can carry forward up to 7 Earned Leaves [POL-LEAVE-002 §EL]."
+          },
+          {
+            "q": "Am I eligible for paternity leave?",
+            "a": "Yes, 4–7 days of paternity leave are available [POL-LEAVE-002 §PAT]."
+          }
+        ]
+      },
+      {
+        "category": "meals_benefits",
+        "policy_id": "POL-MEAL-012",
+        "title": "Employee Meal Policy (Store)",
+        "effective_from": "2023-10-13",
+        "owner_role": "HR / Operations",
+        "applies_to_roles": [
+          "store_staff",
+          "part_time_store"
+        ],
+        "summary": "Store employees: two regular beverages + one food per working day (in‑house consumption only). PT: one beverage + one side (shift‑linked). Store Managers: 30% discount twice a month.",
+        "sections": [
+          {
+            "section": "1",
+            "heading": "Eligibility",
+            "pages": "1-2"
+          },
+          {
+            "section": "2",
+            "heading": "Rules",
+            "pages": "2-3"
+          }
+        ],
+        "references": [
+          {
+            "pdf": "Employee Meal Policy Store.pdf"
+          }
+        ],
+        "last_reviewed": "2023-10-11",
+        "qa": [
+          {
+            "q": "What meals are store employees entitled to?",
+            "a": "Two beverages and one food item per working day [POL-MEAL-012 §1]."
+          },
+          {
+            "q": "Are part-time staff eligible?",
+            "a": "Yes, they get one beverage and one side per shift [POL-MEAL-012 §1]."
+          }
+        ]
+      },
+      {
+        "category": "media_interaction",
+        "policy_id": "POL-MEDIA-011",
+        "title": "Media Interaction & Communications CoC (Internal Guideline)",
+        "effective_from": "TBD",
+        "owner_role": "PR / Communications",
+        "applies_to_roles": [
+          "all"
+        ],
+        "summary": "All media queries routed via PR; only designated spokespersons can comment; do not engage without PR; store staff must log media arrivals; reshare only official posts.",
+        "sections": [
+          {
+            "section": "eligibility",
+            "heading": "Applicability & Spokespersons",
+            "pages": "1"
+          },
+          {
+            "section": "process",
+            "heading": "Routing & Crisis Handling",
+            "pages": "2-3"
+          }
+        ],
+        "contacts": {
+          "pr_poc": "mitali.jain@thirdwavecoffee.in"
+        },
+        "references": [
+          {
+            "pdf": "media interaction - coc - internal guideline.pdf"
+          }
+        ],
+        "last_reviewed": "TBD",
+        "qa": [
+          {
+            "q": "Can I talk to a journalist about store updates?",
+            "a": "No, only designated spokespersons may respond. Route all queries to PR [POL-MEDIA-011 §process]."
+          }
+        ]
+      },
+      {
+        "policy_id": "POL-MOB-014",
+        "title": "Mobile Phone Usage Policy (Store Cafés)",
+        "references": [
+          {
+            "pdf": "Revised Mobile Phone Usage Policy For Cafe (1).pdf"
+          }
+        ],
+        "sections": [
+          {
+            "section": "1",
+            "heading": "Shift Rules",
+            "pages": "1-2"
+          },
+          {
+            "section": "2",
+            "heading": "Permitted Usage",
+            "pages": "2"
+          },
+          {
+            "section": "3",
+            "heading": "Consequences",
+            "pages": "3"
+          }
+        ],
+        "qa": [
+          {
+            "q": "Where should I keep my phone during shifts?",
+            "a": "Hand it over to MOD in locked status; stored under CCTV [POL-MOB-014 §1]."
+          },
+          {
+            "q": "Who can carry a phone during a shift?",
+            "a": "Only the Store Manager or MOD, for emergencies [POL-MOB-014 §2]."
+          }
+        ]
+      },
+      {
+        "category": "posh",
+        "policy_id": "POL-POSH-005",
+        "title": "POSH Policy (Internal Committee & Process)",
+        "effective_from": "2023-08-30",
+        "last_revised_on": "2024-10-16",
+        "owner_role": "HR / IC",
+        "applies_to_roles": [
+          "all"
+        ],
+        "summary": "Defines sexual harassment; scope of workplace incl. virtual; IC composition; complaint filing within 3 months (+3 months extension); inquiry within 90 days; actions during pendency; sanctions on proof; confidentiality and no‑retaliation.",
+        "sections": [
+          {
+            "section": "1",
+            "heading": "Definition",
+            "pages": "2"
+          },
+          {
+            "section": "2",
+            "heading": "Workplace Scope",
+            "pages": "3"
+          },
+          {
+            "section": "5-11",
+            "heading": "IC & Inquiry Process",
+            "pages": "4-8"
+          }
+        ],
+        "contacts": {
+          "ic_email": "posh@thirdwavecoffee.in"
+        },
+        "references": [
+          {
+            "pdf": "POSH Policy - Third Wave Coffee_16Oct2024.pdf"
+          }
+        ],
+        "last_reviewed": "2024-10-16",
+        "qa": [
+          {
+            "q": "What is the complaint filing window?",
+            "a": "You must file within 3 months of the incident, extendable by another 3 months [POL-POSH-005 §5]."
+          },
+          {
+            "q": "How long does an inquiry take?",
+            "a": "The IC must complete inquiries within 90 days [POL-POSH-005 §11]."
+          }
+        ]
+      },
+      {
+        "category": "relocation",
+        "policy_id": "POL-RELO-013",
+        "title": "Relocation Policy (Store)",
+        "effective_from": "2023-02-15",
+        "owner_role": "HRBP",
+        "applies_to_roles": [
+          "all"
+        ],
+        "summary": "Relocation types: Joining, Versatility (promotion/other), Self‑request, Deputation. Benefits include hotel stay windows, brokerage/settling advance, travel for self/family, household movement via Admin/quotes; clawback if exit <12 months.",
+        "sections": [
+          {
+            "section": "types",
+            "heading": "Types of Relocation",
+            "pages": "2"
+          },
+          {
+            "section": "benefits",
+            "heading": "Benefits",
+            "pages": "3-4"
+          }
+        ],
+        "references": [
+          {
+            "pdf": "relocation policy store[1].pdf"
+          }
+        ],
+        "last_reviewed": "TBD",
+        "qa": [
+          {
+            "q": "What happens if I resign within 12 months of relocation?",
+            "a": "You may be required to return relocation benefits [POL-RELO-013 §benefits]."
+          }
+        ]
+      },
+      {
+        "category": "travel_expense",
+        "policy_id": "POL-TRV-009",
+        "title": "Domestic & Local Travel Policy (incl. reimbursement)",
+        "effective_from": "2023-02-01",
+        "owner_role": "HR / Admin",
+        "applies_to_roles": [
+          "all"
+        ],
+        "summary": "Local vs Domestic cut‑off: 80 km. Personal vehicle reimbursement: 2‑wheeler ₹5/km (Exec+), 4‑wheeler ₹10/km (AOM to CxO). Reservations via Admin; economy class; approvals for >₹10k airfare. City categories A/B/C with lodging, meal per diem grid by grade.",
+        "sections": [
+          {
+            "section": "local",
+            "heading": "Local Travel ≤80 km",
+            "pages": "2"
+          },
+          {
+            "section": "domestic",
+            "heading": "Domestic Travel >80 km",
+            "pages": "3-4"
+          }
+        ],
+        "references": [
+          {
+            "pdf": "Domestic and local travel policy - Store.pdf"
+          }
+        ],
+        "last_reviewed": "TBD",
+        "qa": [
+          {
+            "q": "What is the reimbursement for 2-wheeler travel?",
+            "a": "₹5/km for employees of Executive grade and above [POL-TRV-009 §local]."
+          },
+          {
+            "q": "Can I book business class flights?",
+            "a": "No, only economy class is permitted [POL-TRV-009 §reservations]."
+          }
+        ]
+      },
+      {
+        "category": "working_hours_overtime",
+        "policy_id": "POL-WH-003",
+        "title": "Working Hours & Overtime",
+        "effective_from": "2024-07-01",
+        "owner_role": "HR",
+        "applies_to_roles": [
+          "all"
+        ],
+        "summary": "9 hours/day incl 1 hour staggered breaks; 4 weekly offs/month on rotation; OT after +30 min; Baristas covered; ASM/SM not covered; Flexi timers normal rates up to 9:30h then 2x.",
+        "sections": [
+          {
+            "section": "3",
+            "heading": "Working Hours & Weekly Offs",
+            "pages": "2-3"
+          },
+          {
+            "section": "4",
+            "heading": "Breaks",
+            "pages": "3"
+          },
+          {
+            "section": "5",
+            "heading": "Overtime Eligibility & Rates",
+            "pages": "4"
+          }
+        ],
+        "references": [
+          {
+            "pdf": "revised ot policy.pdf"
+          }
+        ],
+        "last_reviewed": "2024-08-01",
+        "qa": [
+          {
+            "q": "When does overtime apply?",
+            "a": "Overtime applies if you work more than 30 minutes beyond your scheduled shift [POL-WH-003 §5]."
+          },
+          {
+            "q": "How many weekly offs do I get?",
+            "a": "Employees are entitled to 4 weekly offs per month on a rotational basis [POL-WH-003 §3]."
+          }
+        ]
+      }
+    ]
+  },
+  "decision_trees": {
+    "leave_request": {
+      "start": "employee_intent",
+      "nodes": {
+        "employee_intent": {
+          "ask": "Leave type and dates?",
+          "next": "eligibility_check"
+        },
+        "eligibility_check": {
+          "rule": "Check role/tenure; EL/FL balance; medical note if SL ≥3 days/month",
+          "on_fail": "explain_ineligible_with_citation",
+          "on_pass": "manager_approval"
+        },
+        "manager_approval": {
+          "rule": "If no action >48h escalate to HRBP",
+          "next": "record_and_confirm"
+        },
+        "record_and_confirm": {
+          "action": "Summarize with citations and SLA"
+        }
+      }
+    },
+    "posh_reporting": {
+      "start": "safety_first",
+      "nodes": {
+        "safety_first": {
+          "action": "Assure confidentiality & no‑retaliation; offer interim measures"
+        },
+        "route_to_icc": {
+          "action": "Provide IC email and filing window; outline 90‑day inquiry SLA"
+        }
+      }
+    },
+    "travel_booking": {
+      "start": "trip_intent",
+      "nodes": {
+        "trip_intent": {
+          "ask": "City, dates, purpose, grade?",
+          "next": "class_and_budget"
+        },
+        "class_and_budget": {
+          "rule": "Economy only; Admin booking; >₹10k airfare needs HR Head approval",
+          "next": "per_diem"
+        },
+        "per_diem": {
+          "action": "Compute lodging/meal per diem by city category & grade"
+        }
+      }
+    }
+  },
+  "glossary": [
+    {
+      "term": "EL",
+      "definition": "Earned Leave"
+    },
+    {
+      "term": "FL",
+      "definition": "Flexi Leave (mix of SL/CL/Wellness/Celebratory/Bereavement)"
+    },
+    {
+      "term": "IC / ICC",
+      "definition": "Internal Committee for POSH inquiries"
+    },
+    {
+      "term": "Per Diem",
+      "definition": "Daily allowance for meals/incidental expenses while traveling"
+    },
+    {
+      "term": "Comp Off",
+      "definition": "Compensatory Off for working on designated off/non-working days"
+    }
+  ],
+  "agent_guardrails": {
+    "must_cite": true,
+    "citation_style": "inline_brackets",
+    "fallback_if_uncertain": "I couldn’t verify that in the current HR policy set. Please check with HRBP or share the exact clause.",
+    "never_answer_without_policy_basis": true,
+    "red_flags": [
+      "Legal interpretations beyond policy text",
+      "Medical or security advice outside policy scope",
+      "Personal data disclosure requests"
+    ]
+  },
+  "domain_lock": {
+    "enforce": true,
+    "allowed_topics": [
+      "RESPECT values & badges",
+      "Orientation (online)",
+      "ZingLearn LMS (training & comms)",
+      "Bench Planning (career progression)",
+      "HR Connect check-ins",
+      "Café operations (workload, staffing, team dynamics)",
+      "HR Policies (conduct, attendance/leave, working hours/OT, compensation/benefits, health/safety/POSH, grievance, separation/F&F, media interaction, travel/expense, data privacy/IT, meals, relocation)"
+    ],
+    "out_of_scope_message": "I can only talk about your experience at Third Wave Coffee—your store, team, and TWC programs and policies."
+  },
+  "employee_mapping": [
+    { "store_name": "Lajpat Nagar", "store_id": "S153", "area_manager_id": "H1766", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Kailash", "trainer_id": "h2595" },
+    { "store_name": "Indirapuram", "store_id": "S195", "area_manager_id": "H1766", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Kailash", "trainer_id": "h2595" },
+    { "store_name": "India Expo Plaza", "store_id": "S202", "area_manager_id": "H1766", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Kailash", "trainer_id": "h2595" },
+    { "store_name": "Mall of India", "store_id": "S056", "area_manager_id": "H1766", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Kailash", "trainer_id": "h2595" },
+    { "store_name": "Sector 63", "store_id": "S101", "area_manager_id": "H1766", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Kailash", "trainer_id": "h2595" },
+    { "store_name": "Spectrum Mall", "store_id": "S112", "area_manager_id": "H1766", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Kailash", "trainer_id": "h2595" },
+    { "store_name": "Central Market- Sector 120", "store_id": "S166", "area_manager_id": "H1766", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Kailash", "trainer_id": "h2595" },
+    { "store_name": "Advant Noida", "store_id": "S167", "area_manager_id": "H1766", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Kailash", "trainer_id": "h2595" },
+    { "store_name": "Bhutani City Centre Noida", "store_id": "S192", "area_manager_id": "H1766", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Kailash", "trainer_id": "h2595" },
+    { "store_name": "Defence Colony", "store_id": "S027", "area_manager_id": "H1766", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Kailash", "trainer_id": "h2595" },
+    { "store_name": "Khan Market", "store_id": "S037", "area_manager_id": "H1766", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Kailash", "trainer_id": "h2595" },
+    { "store_name": "Connaught Place", "store_id": "S049", "area_manager_id": "H1766", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Kailash", "trainer_id": "h2595" },
+    { "store_name": "Kalkaji", "store_id": "S055", "area_manager_id": "H1766", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Kailash", "trainer_id": "h2595" },
+    { "store_name": "Sector 07", "store_id": "S039", "area_manager_id": "H2396", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Kailash", "trainer_id": "h2595" },
+    { "store_name": "Sector 35", "store_id": "S042", "area_manager_id": "H2396", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Kailash", "trainer_id": "h2595" },
+    { "store_name": "Panchkula", "store_id": "S062", "area_manager_id": "H2396", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Hema", "trainer_id": "h1169" },
+    { "store_name": "Jubilee Walk Mohali", "store_id": "S122", "area_manager_id": "H2396", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Hema", "trainer_id": "h1169" },
+    { "store_name": "Deer Park", "store_id": "S024", "area_manager_id": "H535", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Kailash", "trainer_id": "h2595" },
+    { "store_name": "GK 1", "store_id": "S035", "area_manager_id": "H535", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Kailash", "trainer_id": "h2595" },
+    { "store_name": "Kailash Colony", "store_id": "S072", "area_manager_id": "H535", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Kailash", "trainer_id": "h2595" },
+    { "store_name": "Green Park", "store_id": "S142", "area_manager_id": "H535", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Kailash", "trainer_id": "h2595" },
+    { "store_name": "Omaxe World Street", "store_id": "S171", "area_manager_id": "H535", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Kailash", "trainer_id": "h2595" },
+    { "store_name": "Faridabad Sec 14", "store_id": "S172", "area_manager_id": "H2396", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Kailash", "trainer_id": "h2595" },
+    { "store_name": "DLF Saltstayz", "store_id": "S197", "area_manager_id": "H2396", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Viraj", "trainer_id": "h1278" },
+    { "store_name": "DLF Star Tower", "store_id": "S198", "area_manager_id": "H2396", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Kailash", "trainer_id": "h2595" },
+    { "store_name": "Platina", "store_id": "S105", "area_manager_id": "H2396", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Hema", "trainer_id": "h1169" },
+    { "store_name": "32 Mile Stone", "store_id": "S029", "area_manager_id": "H2396", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Hema", "trainer_id": "h1169" },
+    { "store_name": "Vatika Business Park", "store_id": "S038", "area_manager_id": "H2396", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Hema", "trainer_id": "h1169" },
+    { "store_name": "Golf Course", "store_id": "S073", "area_manager_id": "H2396", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Hema", "trainer_id": "h1169" },
+    { "store_name": "Sushant Lok", "store_id": "S099", "area_manager_id": "H2396", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Hema", "trainer_id": "h1169" },
+    { "store_name": "AIPL Business Club", "store_id": "S100", "area_manager_id": "H2396", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Hema", "trainer_id": "h1169" },
+    { "store_name": "Fortis", "store_id": "S102", "area_manager_id": "H2396", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Hema", "trainer_id": "h1169" },
+    { "store_name": "Vensej Mall", "store_id": "S148", "area_manager_id": "H2396", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Kailash", "trainer_id": "h2595" },
+    { "store_name": "Airia Mall", "store_id": "S150", "area_manager_id": "H2396", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Hema", "trainer_id": "h1169" },
+    { "store_name": "DME 63 LHS", "store_id": "S154", "area_manager_id": "H2396", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Hema", "trainer_id": "h1169" },
+    { "store_name": "DME 69 RHS", "store_id": "S155", "area_manager_id": "H2396", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Hema", "trainer_id": "h1169" },
+    { "store_name": "Nirvana Courtyard", "store_id": "S164", "area_manager_id": "H2396", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Hema", "trainer_id": "h1169" },
+    { "store_name": "Capital Cyberscape", "store_id": "S176", "area_manager_id": "H2396", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Kailash", "trainer_id": "h2595" },
+    { "store_name": "GK 2", "store_id": "S026", "area_manager_id": "H955", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Hema", "trainer_id": "h1169" },
+    { "store_name": "Saket", "store_id": "S028", "area_manager_id": "H955", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Hema", "trainer_id": "h1169" },
+    { "store_name": "Punjabi Bagh", "store_id": "S036", "area_manager_id": "H955", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Hema", "trainer_id": "h1169" },
+    { "store_name": "Ambience Mall, Vasant Kunj", "store_id": "S040", "area_manager_id": "H955", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Kailash", "trainer_id": "h2595" },
+    { "store_name": "Netaji Subhash Place", "store_id": "S041", "area_manager_id": "H955", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Hema", "trainer_id": "h1169" },
+    { "store_name": "Hauz Khas", "store_id": "S113", "area_manager_id": "H955", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Hema", "trainer_id": "h1169" },
+    { "store_name": "Janakpuri", "store_id": "S120", "area_manager_id": "H955", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Hema", "trainer_id": "h1169" },
+    { "store_name": "Basant Lok", "store_id": "S129", "area_manager_id": "H955", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Hema", "trainer_id": "h1169" },
+    { "store_name": "DLF Avenue Mall - Saket", "store_id": "S121", "area_manager_id": "H955", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Kailash", "trainer_id": "h2595" },
+    { "store_name": "Pacific Mall - Tagore Garden", "store_id": "S126", "area_manager_id": "H955", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Hema", "trainer_id": "h1169" },
+    { "store_name": "Paschim Vihar", "store_id": "S141", "area_manager_id": "H955", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Hema", "trainer_id": "h1169" },
+    { "store_name": "Rohini Sec 14", "store_id": "S173", "area_manager_id": "H955", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Hema", "trainer_id": "h1169" },
+    { "store_name": "Vasant Kunj", "store_id": "S174", "area_manager_id": "H955", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Kailash", "trainer_id": "h2595" },
+    { "store_name": "Rajouri Garden", "store_id": "S182", "area_manager_id": "H955", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Hema", "trainer_id": "h1169" },
+    { "store_name": "Shalimar Bagh Metro", "store_id": "S188", "area_manager_id": "H955", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Hema", "trainer_id": "h1169" },
+    { "store_name": "Malviya Nagar", "store_id": "S200", "area_manager_id": "H955", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Kailash", "trainer_id": "h2595" },
+    { "store_name": "DLF Midtown", "store_id": "S187", "area_manager_id": "H955", "hrbp_id": "H3578", "regional_hr_id": "H2165", "region": "North", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Kailash", "trainer_id": "h2595" },
+    { "store_name": "TWC-Varthur", "store_id": "S053", "area_manager_id": "H546", "hrbp_id": "H2761", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "TWC-Brookfield", "store_id": "S032", "area_manager_id": "H546", "hrbp_id": "H2761", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "C-Forum Shantiniketan Whitef", "store_id": "S005", "area_manager_id": "H546", "hrbp_id": "H2761", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "TWC-Nexus Mall, Whitefield", "store_id": "S091", "area_manager_id": "H546", "hrbp_id": "H2761", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "TWC-PMC-Bangalore", "store_id": "S019", "area_manager_id": "H546", "hrbp_id": "H2761", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "TWC-Manipal Hospital", "store_id": "S065", "area_manager_id": "H546", "hrbp_id": "H2761", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "Brookfield - Nxt Whitefield", "store_id": "S189", "area_manager_id": "H546", "hrbp_id": "H2761", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mahadev", "trainer_id": "h1761" },
+    { "store_name": "TWC-Karthik Nagar - Marathaha", "store_id": "S034", "area_manager_id": "H546", "hrbp_id": "H2761", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "Prestige Techno star", "store_id": "S184", "area_manager_id": "H546", "hrbp_id": "H2761", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mahadev", "trainer_id": "h1761" },
+    { "store_name": "TWC-Kilpauk", "store_id": "S143", "area_manager_id": "H3362", "hrbp_id": "H2761", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mahadev", "trainer_id": "h1761" },
+    { "store_name": "TWC-Express Avenue Mall", "store_id": "S144", "area_manager_id": "H3362", "hrbp_id": "H2761", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mahadev", "trainer_id": "h1761" },
+    { "store_name": "TWC-Adyar", "store_id": "S145", "area_manager_id": "H3362", "hrbp_id": "H2761", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mahadev", "trainer_id": "h1761" },
+    { "store_name": "TWC-Kathipara Urban Square", "store_id": "S157", "area_manager_id": "H3362", "hrbp_id": "H2761", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mahadev", "trainer_id": "h1761" },
+    { "store_name": "TWC-Phoenix Palladium Chenna", "store_id": "S123", "area_manager_id": "H3362", "hrbp_id": "H2761", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mahadev", "trainer_id": "h1761" },
+    { "store_name": "TWC-Bedford Coonoor", "store_id": "S021", "area_manager_id": "H3362", "hrbp_id": "H2761", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "TWC-Besant Nagar", "store_id": "S178", "area_manager_id": "H3362", "hrbp_id": "H2761", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "Mettupalayam", "store_id": "S199", "area_manager_id": "H3362", "hrbp_id": "H2761", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "Ashoka Nagar", "store_id": "S201", "area_manager_id": "H3362", "hrbp_id": "H2761", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mahadev", "trainer_id": "h1761" },
+    { "store_name": "TWC-HRBR Layout", "store_id": "S023", "area_manager_id": "H833", "hrbp_id": "H2761", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mallika", "trainer_id": "h701" },
+    { "store_name": "TWC-Manyata Embassy NXT", "store_id": "S092", "area_manager_id": "H833", "hrbp_id": "H2761", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mallika", "trainer_id": "h701" },
+    { "store_name": "TWC-Sahakar Nagar", "store_id": "S070", "area_manager_id": "H833", "hrbp_id": "H2761", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "TWC-New Bel Road", "store_id": "S020", "area_manager_id": "H833", "hrbp_id": "H2761", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mahadev", "trainer_id": "h1761" },
+    { "store_name": "TWC-Vijayanagar", "store_id": "S125", "area_manager_id": "H833", "hrbp_id": "H2761", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mallika", "trainer_id": "h701" },
+    { "store_name": "TWC-Rajajinagar", "store_id": "S146", "area_manager_id": "H833", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "Sparsh Hospital 2 Raj Rajeshwari N", "store_id": "S191", "area_manager_id": "H833", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mahadev", "trainer_id": "h1761" },
+    { "store_name": "TWC-Phoenix Mall of Asia", "store_id": "S110", "area_manager_id": "H833", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "Basaveshwar Nagar", "store_id": "S185", "area_manager_id": "H833", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "TWC-Brigade Utopia", "store_id": "S131", "area_manager_id": "H1355", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mallika", "trainer_id": "h701" },
+    { "store_name": "TWC-Koramangala 8th Block", "store_id": "S068", "area_manager_id": "H1355", "hrbp_id": "H2761", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mahadev", "trainer_id": "h1761" },
+    { "store_name": "TWC-Akshay Nagar", "store_id": "S156", "area_manager_id": "H1355", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mahadev", "trainer_id": "h1761" },
+    { "store_name": "TWC-Koramangala", "store_id": "S001", "area_manager_id": "H1355", "hrbp_id": "H2761", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mahadev", "trainer_id": "h1761" },
+    { "store_name": "TWC-Vijaya Bank Layout", "store_id": "S069", "area_manager_id": "H1355", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "TWC-BTM Layout", "store_id": "S063", "area_manager_id": "H1355", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mahadev", "trainer_id": "h1761" },
+    { "store_name": "TWC-CMH Indira Nagar", "store_id": "S002", "area_manager_id": "H546", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mahadev", "trainer_id": "h1761" },
+    { "store_name": "TWC-12th Main Indira Nagar", "store_id": "S009", "area_manager_id": "H546", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mahadev", "trainer_id": "h1761" },
+    { "store_name": "TWC-Malleshwaram", "store_id": "S012", "area_manager_id": "H2155", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mahadev", "trainer_id": "h1761" },
+    { "store_name": "TWC-Sadashiv Nagar", "store_id": "S004", "area_manager_id": "H2155", "hrbp_id": "H2761", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "TWC-Frazer town", "store_id": "S030", "area_manager_id": "H2155", "hrbp_id": "H2761", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mahadev", "trainer_id": "h1761" },
+    { "store_name": "TWC-Lavelle Road", "store_id": "S031", "area_manager_id": "H2155", "hrbp_id": "H2761", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "TWC-Cunningham Road", "store_id": "S011", "area_manager_id": "H2155", "hrbp_id": "H2761", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mahadev", "trainer_id": "h1761" },
+    { "store_name": "TWC-Deloitte - Bangalore", "store_id": "S115", "area_manager_id": "H2155", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mahadev", "trainer_id": "h1761" },
+    { "store_name": "TWC-Church street", "store_id": "S014", "area_manager_id": "H2155", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "TWC-UB City", "store_id": "S007", "area_manager_id": "H2155", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mallika", "trainer_id": "h701" },
+    { "store_name": "St Marks Road -Indiqube", "store_id": "S193", "area_manager_id": "H2155", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "TWC-Bellandur", "store_id": "S008", "area_manager_id": "H2601", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "TWC-Prestige Tech Park Electra", "store_id": "S158", "area_manager_id": "H2601", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mallika", "trainer_id": "h701" },
+    { "store_name": "TWC-Kanakpura Road", "store_id": "S067", "area_manager_id": "H2601", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mahadev", "trainer_id": "h1761" },
+    { "store_name": "TWC-Banashankari", "store_id": "S033", "area_manager_id": "H2601", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "TWC-Forum South Bangalore", "store_id": "S094", "area_manager_id": "H2601", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "TWC-Jaya Nagar", "store_id": "S016", "area_manager_id": "H2601", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mallika", "trainer_id": "h701" },
+    { "store_name": "TWC-Sakra Hospital", "store_id": "S051", "area_manager_id": "H2601", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "TWC-The Sqaure - Raj Etternia Ku", "store_id": "S159", "area_manager_id": "H2601", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "TWC-Harlur Road", "store_id": "S140", "area_manager_id": "H2601", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mallika", "trainer_id": "h701" },
+    { "store_name": "TWC-Devaraj Urs Rd-Mysuru", "store_id": "S119", "area_manager_id": "H1355", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mahadev", "trainer_id": "h1761" },
+    { "store_name": "TWC-Kalidasa Road Mysore", "store_id": "S152", "area_manager_id": "H1355", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "TWC-Sarjapur Road", "store_id": "S017", "area_manager_id": "H1355", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "TWC-Balmatta", "store_id": "S139", "area_manager_id": "H3270", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mallika", "trainer_id": "h701" },
+    { "store_name": "TWC-Fiza by Nexus Mall", "store_id": "S133", "area_manager_id": "H3270", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "TWC-HSR 5th Main", "store_id": "S149", "area_manager_id": "H3270", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mahadev", "trainer_id": "h1761" },
+    { "store_name": "TWC-HSR-2", "store_id": "S018", "area_manager_id": "H3270", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mallika", "trainer_id": "h701" },
+    { "store_name": "TWC-New Airport Road", "store_id": "S006", "area_manager_id": "H3270", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mahadev", "trainer_id": "h1761" },
+    { "store_name": "TWC-HSR-1", "store_id": "S003", "area_manager_id": "H3270", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "TWC-Eco World Bay", "store_id": "S022", "area_manager_id": "H3270", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "TWC-JP Nagar", "store_id": "S015", "area_manager_id": "H3270", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Mallika", "trainer_id": "h701" },
+    { "store_name": "TWC-JP Nagar 7th Phase", "store_id": "S095", "area_manager_id": "H3270", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "TWC-BIAL T1 Kiosk", "store_id": "S114", "area_manager_id": "H3270", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "TWC-Bangalore Airport Outside", "store_id": "S050", "area_manager_id": "H3270", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "Brookfield - EcoWorld 4AB", "store_id": "S190", "area_manager_id": "H3270", "hrbp_id": "H1972", "regional_hr_id": "H3551", "region": "South", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sheldon", "trainer_id": "h1697" },
+    { "store_name": "Mahavir Nagar", "store_id": "S096", "area_manager_id": "H1575", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Viraj", "trainer_id": "h1278" },
+    { "store_name": "Kandivali Thakur Village", "store_id": "S088", "area_manager_id": "H1575", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Viraj", "trainer_id": "h1278" },
+    { "store_name": "Emerald Borivali", "store_id": "S076", "area_manager_id": "H1575", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Viraj", "trainer_id": "h1278" },
+    { "store_name": "Oberoi Mall", "store_id": "S090", "area_manager_id": "H1575", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Viraj", "trainer_id": "h1278" },
+    { "store_name": "Juhu", "store_id": "S061", "area_manager_id": "H1575", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Viraj", "trainer_id": "h1278" },
+    { "store_name": "Damodar Santacruz", "store_id": "S138", "area_manager_id": "H1575", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Viraj", "trainer_id": "h1278" },
+    { "store_name": "Crossword, Santacruz", "store_id": "S116", "area_manager_id": "H1575", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Viraj", "trainer_id": "h1278" },
+    { "store_name": "Ekta Tripolis Goregoan", "store_id": "S132", "area_manager_id": "H1575", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Viraj", "trainer_id": "h1278" },
+    { "store_name": "Sky City", "store_id": "S165", "area_manager_id": "H1575", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Viraj", "trainer_id": "h1278" },
+    { "store_name": "Mahim", "store_id": "S045", "area_manager_id": "H2908", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Priyanka", "trainer_id": "h3252" },
+    { "store_name": "Equinox, BKC", "store_id": "S087", "area_manager_id": "H2908", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Viraj", "trainer_id": "h1278" },
+    { "store_name": "Runwal Greens Mulund", "store_id": "S075", "area_manager_id": "H2908", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Priyanka", "trainer_id": "h3252" },
+    { "store_name": "R City", "store_id": "S047", "area_manager_id": "H2908", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Viraj", "trainer_id": "h1278" },
+    { "store_name": "Chembur", "store_id": "S097", "area_manager_id": "H2908", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Priyanka", "trainer_id": "h3252" },
+    { "store_name": "Platina", "store_id": "S105", "area_manager_id": "H2908", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Viraj", "trainer_id": "h1278" },
+    { "store_name": "Deloitte, Mumbai", "store_id": "S162", "area_manager_id": "H2908", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Priyanka", "trainer_id": "h3252" },
+    { "store_name": "Phoenix Market City- Mumbai", "store_id": "S163", "area_manager_id": "H2908", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Priyanka", "trainer_id": "h3252" },
+    { "store_name": "CBD Belapur", "store_id": "S111", "area_manager_id": "H2273", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Viraj", "trainer_id": "h1278" },
+    { "store_name": "The Walk", "store_id": "S103", "area_manager_id": "H2273", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Priyanka", "trainer_id": "h3252" },
+    { "store_name": "Viviana Mall", "store_id": "S089", "area_manager_id": "H2273", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Viraj", "trainer_id": "h1278" },
+    { "store_name": "Vashi Palm Beach", "store_id": "S137", "area_manager_id": "H2273", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Priyanka", "trainer_id": "h3252" },
+    { "store_name": "Pune Mumbai Expressway", "store_id": "S147", "area_manager_id": "H2273", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Priyanka", "trainer_id": "h3252" },
+    { "store_name": "Inorbit Vashi", "store_id": "S118", "area_manager_id": "H2273", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Viraj", "trainer_id": "h1278" },
+    { "store_name": "Seawoods Highstreet", "store_id": "S127", "area_manager_id": "H2273", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Viraj", "trainer_id": "h1278" },
+    { "store_name": "Delloitte Thane", "store_id": "S180", "area_manager_id": "H2273", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Priyanka", "trainer_id": "h3252" },
+    { "store_name": "Seawoods Nexus", "store_id": "S161", "area_manager_id": "H2273", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Viraj", "trainer_id": "h1278" },
+    { "store_name": "Panchpakhadi", "store_id": "S168", "area_manager_id": "H2273", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Viraj", "trainer_id": "h1278" },
+    { "store_name": "Pokhran Road", "store_id": "S170", "area_manager_id": "H2273", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Priyanka", "trainer_id": "h3252" },
+    { "store_name": "Sea Castle, Marine Lines", "store_id": "S077", "area_manager_id": "H3386", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Viraj", "trainer_id": "h1278" },
+    { "store_name": "Versova", "store_id": "S057", "area_manager_id": "H3386", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Priyanka", "trainer_id": "h3252" },
+    { "store_name": "Vile Parle", "store_id": "S107", "area_manager_id": "H3386", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Priyanka", "trainer_id": "h3252" },
+    { "store_name": "Andheri, Chakala", "store_id": "S106", "area_manager_id": "H3386", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Viraj", "trainer_id": "h1278" },
+    { "store_name": "Kemps Corner", "store_id": "S043", "area_manager_id": "H3386", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Priyanka", "trainer_id": "h3252" },
+    { "store_name": "Cuff Parade, Star Mansion", "store_id": "S078", "area_manager_id": "H3386", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Priyanka", "trainer_id": "h3252" },
+    { "store_name": "Lokhandwala", "store_id": "S044", "area_manager_id": "H3386", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Viraj", "trainer_id": "h1278" },
+    { "store_name": "Andheri, Marol", "store_id": "S117", "area_manager_id": "H3386", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Priyanka", "trainer_id": "h3252" },
+    { "store_name": "Worli", "store_id": "S135", "area_manager_id": "H3386", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Priyanka", "trainer_id": "h3252" },
+    { "store_name": "Nariman Point", "store_id": "S177", "area_manager_id": "H3386", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sunil", "trainer_id": "h3247" },
+    { "store_name": "Balewadi Highstreet", "store_id": "S080", "area_manager_id": "H2758", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Priyanka", "trainer_id": "h3252" },
+    { "store_name": "MOM, Wakad", "store_id": "S104", "area_manager_id": "H2758", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Priyanka", "trainer_id": "h3252" },
+    { "store_name": "Phoenix Market City - Pune", "store_id": "S074", "area_manager_id": "H2758", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Priyanka", "trainer_id": "h3252" },
+    { "store_name": "Koregoan Park", "store_id": "S059", "area_manager_id": "H2758", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Priyanka", "trainer_id": "h3252" },
+    { "store_name": "Kothrud", "store_id": "S060", "area_manager_id": "H2758", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Priyanka", "trainer_id": "h3252" },
+    { "store_name": "Kalyani Nagar - Pune", "store_id": "S048", "area_manager_id": "H2758", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Priyanka", "trainer_id": "h3252" },
+    { "store_name": "Wanowrie", "store_id": "S058", "area_manager_id": "H2758", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Priyanka", "trainer_id": "h3252" },
+    { "store_name": "FC Road", "store_id": "S109", "area_manager_id": "H2758", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Priyanka", "trainer_id": "h3252" },
+    { "store_name": "Westend Aundh", "store_id": "S134", "area_manager_id": "H2758", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Priyanka", "trainer_id": "h3252" },
+    { "store_name": "Pimple Saudagar", "store_id": "S130", "area_manager_id": "H2758", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Priyanka", "trainer_id": "h3252" },
+    { "store_name": "Pimple Nilakh", "store_id": "S136", "area_manager_id": "H2758", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Priyanka", "trainer_id": "h3252" },
+    { "store_name": "Bibewadi", "store_id": "S128", "area_manager_id": "H2758", "hrbp_id": "H3603", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Priyanka", "trainer_id": "h3252" },
+    { "store_name": "Inorbit Mall", "store_id": "S086", "area_manager_id": "H2262", "hrbp_id": "H3247", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sunil", "trainer_id": "h3247" },
+    { "store_name": "Khajaguda", "store_id": "S066", "area_manager_id": "H2262", "hrbp_id": "H3247", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sunil", "trainer_id": "h3247" },
+    { "store_name": "Sainikpuri", "store_id": "S081", "area_manager_id": "H2262", "hrbp_id": "H3247", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sunil", "trainer_id": "h3247" },
+    { "store_name": "Salarpuria Sattva", "store_id": "S082", "area_manager_id": "H2262", "hrbp_id": "H3247", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sunil", "trainer_id": "h3247" },
+    { "store_name": "Kondapur", "store_id": "S083", "area_manager_id": "H2262", "hrbp_id": "H3247", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sunil", "trainer_id": "h3247" },
+    { "store_name": "Platina", "store_id": "S085", "area_manager_id": "H2262", "hrbp_id": "H3247", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sunil", "trainer_id": "h3247" },
+    { "store_name": "Banjara Hills", "store_id": "S084", "area_manager_id": "H2262", "hrbp_id": "H3247", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sunil", "trainer_id": "h3247" },
+    { "store_name": "Hyderabad Airport Inside", "store_id": "S108", "area_manager_id": "H2262", "hrbp_id": "H3247", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sunil", "trainer_id": "h3247" },
+    { "store_name": "Himayat Nagar", "store_id": "S169", "area_manager_id": "H2262", "hrbp_id": "H3247", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sunil", "trainer_id": "h3247" },
+    { "store_name": "Madeenaguda", "store_id": "S175", "area_manager_id": "H2262", "hrbp_id": "H3247", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sunil", "trainer_id": "h3247" },
+    { "store_name": "Capital Land ITPH", "store_id": "S206", "area_manager_id": "H2262", "hrbp_id": "H3247", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sunil", "trainer_id": "h3247" },
+    { "store_name": "Manikonda", "store_id": "S194", "area_manager_id": "H2262", "hrbp_id": "H3247", "regional_hr_id": "HC002", "region": "West", "hr_head_id": "H2081", "lms_head_id": "H541", "trainer_name": "Sunil", "trainer_id": "h3247" }
+  ]
+}
