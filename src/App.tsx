@@ -10,204 +10,247 @@ import type { TranscriptionEntry, SentimentAnalysisResult } from './types';impor
 
 import type { TranscriptionEntry, SentimentAnalysisResult } from './types';
 
+// Your deployed Vercel backend URL
+
+const API_BASE_URL = 'https://hr-sentiment-analyzer-6-hhneayy1f-training-twcs-projects.vercel.app';// Your deployed Vercel backend URL
+
+const API_BASE_URL = 'https://hr-sentiment-analyzer-6-hhneayy1f-training-twcs-projects.vercel.app';
+
 const App: React.FC = () => {
 
-  const [status, setStatus] = useState<'idle' | 'connecting' | 'connected' | 'analyzing' | 'finished'>('idle');// FIX: Added a local interface for the `LiveSession` object as it's not exported.
+  const [status, setStatus] = useState<'idle' | 'connecting' | 'connected' | 'analyzing' | 'finished'>('idle');const AudioContext = window.AudioContext || (window as any).webkitAudioContext;
 
-  const [transcriptionHistory, setTranscriptionHistory] = useState<TranscriptionEntry[]>([]);// This interface defines the methods used in this component.
+  const [transcriptionHistory, setTranscriptionHistory] = useState<TranscriptionEntry[]>([]);
 
-  const [sentimentResult, setSentimentResult] = useState<SentimentAnalysisResult | null>(null);interface LiveSession {
+  const [sentimentResult, setSentimentResult] = useState<SentimentAnalysisResult | null>(null);const App: React.FC = () => {
 
-  sendRealtimeInput(params: { media: Blob }): void;
+  const [status, setStatus] = useState<'idle' | 'connecting' | 'connected' | 'analyzing' | 'finished'>('idle');
 
-  const handleStartConversation = async () => {  close(): void;
+  const handleStartConversation = async () => {  const [transcriptionHistory, setTranscriptionHistory] = useState<TranscriptionEntry[]>([]);
 
-    setStatus('connecting');}
-
-    setTranscriptionHistory([]);
-
-    setSentimentResult(null);// Polyfill for webkitAudioContext
-
-// FIX: Cast `window` to `any` to access the vendor-prefixed `webkitAudioContext`
-
-    // Simulate conversation start// without causing a TypeScript error.
-
-    setTimeout(() => {const AudioContext = window.AudioContext || (window as any).webkitAudioContext;
-
-      setStatus('connected');
-
-      const greeting: TranscriptionEntry = {const App: React.FC = () => {
-
-        text: "Hi, thanks for joining this HR Connect call today. To start, could you tell me a bit about how things have been going for you recently at the store?",  const [status, setStatus] = useState<'idle' | 'connecting' | 'connected' | 'analyzing' | 'finished'>('idle');
-
-        isUser: false,  const [transcriptionHistory, setTranscriptionHistory] = useState<TranscriptionEntry[]>([]);
-
-        timestamp: Date.now()  const [sentimentResult, setSentimentResult] = useState<SentimentAnalysisResult | null>(null);
-
-      };
-
-      setTranscriptionHistory([greeting]);  const sessionPromiseRef = useRef<Promise<LiveSession> | null>(null);
-
-    }, 1000);  const inputAudioContextRef = useRef<AudioContext | null>(null);
-
-  };  const outputAudioContextRef = useRef<AudioContext | null>(null);
-
-  const scriptProcessorRef = useRef<ScriptProcessorNode | null>(null);
-
-  const handleEndConversation = async () => {  const mediaStreamSourceRef = useRef<MediaStreamAudioSourceNode | null>(null);
-
-    setStatus('analyzing');  const mediaStreamRef = useRef<MediaStream | null>(null);
-
-
-
-    // Simulate sentiment analysis  const currentInputTranscriptionRef = useRef('');
-
-    setTimeout(() => {  const currentOutputTranscriptionRef = useRef('');
-
-      setSentimentResult({  const outputAudioQueueRef = useRef<{ source: AudioBufferSourceNode; buffer: AudioBuffer }[]>([]);
-
-        overallSentiment: "Positive",  const nextStartTimeRef = useRef(0);
-
-        summary: "Employee expressed satisfaction with work environment and team support.",  const sourcesRef = useRef<Set<AudioBufferSourceNode>>(new Set());
-
-        keyPoints: [  
-
-          {  const ai = useRef<GoogleGenAI | null>(null);
-
-            point: "Enjoys working with the team",
-
-            type: "Positive",  const getAi = useCallback(() => {
-
-            context: "Team Dynamics"    if (!ai.current) {
-
-          },        if (!process.env.API_KEY) {
-
-          {            alert("API_KEY environment variable not set.");
-
-            point: "Would like more training opportunities",             throw new Error("API_KEY not set");
-
-            type: "Concern",        }
-
-            context: "Professional Development"        ai.current = new GoogleGenAI({ apiKey: process.env.API_KEY });
-
-          }    }
-
-        ]    return ai.current;
-
-      });  }, []);
-
-      setStatus('finished');
-
-    }, 2000);  const handleStartConversation = async () => {
-
-  };    setStatus('connecting');
+    setStatus('connecting');  const [sentimentResult, setSentimentResult] = useState<SentimentAnalysisResult | null>(null);
 
     setTranscriptionHistory([]);
 
-  return (    setSentimentResult(null);
+    setSentimentResult(null);  const sessionPromiseRef = useRef<Promise<LiveSession> | null>(null);
 
-    <div className="min-h-screen bg-slate-900 flex flex-col items-center justify-center p-4 selection:bg-sky-500 selection:text-white">
+  const inputAudioContextRef = useRef<AudioContext | null>(null);
 
-      <div className="w-full max-w-4xl mx-auto flex flex-col md:flex-row gap-8">    try {
+    // Test backend connection  const outputAudioContextRef = useRef<AudioContext | null>(null);
 
-        <div className="w-full md:w-2/3 bg-slate-800/50 rounded-2xl shadow-2xl backdrop-blur-sm border border-slate-700/50 overflow-hidden flex flex-col">      const stream = await navigator.mediaDevices.getUserMedia({ 
+    try {  const scriptProcessorRef = useRef<ScriptProcessorNode | null>(null);
 
-          <header className="p-4 border-b border-slate-700/50">        audio: {
+      const testResponse = await fetch(`${API_BASE_URL}/api/chat`, {  const mediaStreamSourceRef = useRef<MediaStreamAudioSourceNode | null>(null);
 
-            <h1 className="text-xl font-bold text-sky-400">TWC HR Connect</h1>          echoCancellation: true,
+        method: 'POST',  const mediaStreamRef = useRef<MediaStream | null>(null);
 
-            <p className="text-sm text-slate-400">Real-time Employee Feedback</p>          noiseSuppression: true,
+        headers: {
 
-          </header>        }
+          'Content-Type': 'application/json',  const currentInputTranscriptionRef = useRef('');
 
-          <ConversationView transcriptionHistory={transcriptionHistory} status={status} />      });
+        },  const currentOutputTranscriptionRef = useRef('');
 
-          <ControlPanel status={status} onStart={handleStartConversation} onEnd={handleEndConversation} />      mediaStreamRef.current = stream;
+        body: JSON.stringify({  const outputAudioQueueRef = useRef<{ source: AudioBufferSourceNode; buffer: AudioBuffer }[]>([]);
 
-        </div>
+          message: 'Hello, this is a test connection'  const nextStartTimeRef = useRef(0);
 
-      inputAudioContextRef.current = new AudioContext({ sampleRate: 16000 });
+        }),  const sourcesRef = useRef<Set<AudioBufferSourceNode>>(new Set());
 
-        <div className="w-full md:w-1/3 bg-slate-800/50 rounded-2xl shadow-2xl backdrop-blur-sm border border-slate-700/50 p-6 flex flex-col">      outputAudioContextRef.current = new AudioContext({ sampleRate: 24000 });
+      });  
 
-          <SentimentAnalysisView result={sentimentResult} status={status} />      nextStartTimeRef.current = 0;
+  const ai = useRef<GoogleGenAI | null>(null);
 
-        </div>      
+      if (testResponse.ok) {
 
-      </div>      const systemInstruction = `You are "ConnectAI", an expert AI HR assistant for Third Wave Coffee (TWC), designed to conduct HR Connect check-ins. Your persona is friendly, empathetic, and professional.
+        const data = await testResponse.json();  const getAi = useCallback(() => {
 
-      <footer className="text-center mt-8 text-slate-500 text-xs">
+        setStatus('connected');    if (!ai.current) {
 
-        <p>Powered by OpenAI GPT-4o-mini via GitHub Models. For internal demonstration purposes at TWC only.</p>**Conversation Flow & Strategy:**
+                if (!process.env.API_KEY) {
 
-      </footer>Your primary goal is to actively guide the conversation to understand the employee's experience at TWC. Be proactive and lead the discussion by asking open-ended questions. Keep your own responses short and focused on encouraging the employee to share more.
+        // Add AI greeting from backend            alert("API_KEY environment variable not set.");
 
-    </div>
+        const greeting: TranscriptionEntry = {            throw new Error("API_KEY not set");
 
-  );1.  **Opening:** Start IMMEDIATELY with a warm, open-ended question. For example: "Hi, thanks for joining this HR Connect call today. To start, could you tell me a bit about how things have been going for you recently at the store?" Do not wait for the user to speak first.
+          text: data.response || "Hi, thanks for joining this HR Connect call today. How are things going?",        }
 
-};2.  **Explore Key Areas:** Gently guide the conversation through these topics. Use follow-up questions to dig deeper when appropriate.
+          isUser: false,        ai.current = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
-    *   **Role & Team:** "How are you finding your day-to-day responsibilities?" or "How is the dynamic with your team and shift manager?"
+          timestamp: Date.now()    }
 
-export default App;    *   **Challenges & Support:** "Are there any challenges you're facing that you'd like to talk about?" or "Do you feel you have the support you need from your manager and the company?"
-    *   **Positives & Recognition:** "What's been a recent highlight for you at work?" or "Is there anything you're particularly proud of?"
-    *   **Growth & Development:** "What are your thoughts on your career growth at TWC?" or "Have you had a chance to use our training resources on ZingLearn?"
-3.  **Closing:** End with a wrap-up question like, "Thanks for sharing all of that. Is there anything else on your mind, big or small, that we haven't touched on?"
+        };    return ai.current;
 
-**Domain Rules & Guardrails:**
-1. **Domain Lock**: You can ONLY discuss topics related to an employee's experience at Third Wave Coffee, including their store, team, TWC programs, and HR policies. If asked about anything else, respond with: "I can only talk about your experience at Third Wave Coffee—your store, team, and TWC programs and policies."
-2. **Policy Expert**: You are an expert on TWC HR policies. When you answer a question using policy information, you MUST cite the source policy and section in brackets, like this: [POL-LEAVE-002 §EL].
-3. **Uncertainty**: If you cannot answer a question based on the provided policy information, you MUST say: "I couldn’t verify that in the current HR policy set. Please check with your HRBP or share the exact clause." Do not invent answers.
-4. **Safety**: You must AVOID providing legal interpretations, medical advice, or disclosing any employee's personal data.
+        setTranscriptionHistory([greeting]);  }, []);
 
-**Key Domain Information Summary:**
-This is a summary of key policies. Refer to it for answering questions.
-*   **Domain:** Third Wave Coffee (TWC)
-*   **Key Programs:** RESPECT values (badges for performance), ZingLearn LMS (training), Bench Planning (career growth), HR Connect (check-ins).
-*   **Policies:**
-    *   **Leave (POL-LEAVE-002):** 24 Earned Leaves (EL) per year, 7 can be carried forward. 12-14 Flexi Leaves (FL) for various purposes.
-    *   **Meals (POL-MEAL-012):** Full-time store employees get two beverages and one food item per working day.
-    *   **Mobile Phone (POL-MOB-014):** Phones must be handed to the Manager on Duty (MOD) during shifts.
-    *   **Working Hours (POL-WH-003):** Standard shift is 9 hours, including a 1-hour break. Employees get 4 weekly offs per month. Overtime (OT) applies if you work 30+ minutes beyond your shift.
-    *   **POSH (POL-POSH-005):** The POSH policy addresses sexual harassment. Complaints should be filed with the Internal Committee (IC) at posh@thirdwavecoffee.in within 3 months of an incident.
-    *   **Attendance (POL-FAQ-015):** 4 attendance regularizations are allowed per month.
-*   **Glossary:** EL (Earned Leave), FL (Flexi Leave), IC (Internal Committee), MOD (Manager on Duty), TWC (Third Wave Coffee).`;
+      } else {
 
-      sessionPromiseRef.current = getAi().live.connect({
-        model: 'gemini-2.5-flash-native-audio-preview-09-2025',
-        callbacks: {
-          onopen: () => {
-            setStatus('connected');
-            
-            // Send an initial silent packet to prompt the AI to start speaking.
+        throw new Error(`Backend responded with status: ${testResponse.status}`);  const handleStartConversation = async () => {
+
+      }    setStatus('connecting');
+
+    } catch (error) {    setTranscriptionHistory([]);
+
+      console.error('Backend connection failed:', error);    setSentimentResult(null);
+
+      setStatus('idle');
+
+      alert('Failed to connect to backend. Please check the console for details.');    try {
+
+    }      const stream = await navigator.mediaDevices.getUserMedia({ 
+
+  };        audio: {
+
+          echoCancellation: true,
+
+  const handleEndConversation = async () => {          noiseSuppression: true,
+
+    setStatus('analyzing');        }
+
+      });
+
+    // Test sentiment analysis endpoint      mediaStreamRef.current = stream;
+
+    try {
+
+      const response = await fetch(`${API_BASE_URL}/api/analyze`, {      inputAudioContextRef.current = new AudioContext({ sampleRate: 16000 });
+
+        method: 'POST',      outputAudioContextRef.current = new AudioContext({ sampleRate: 24000 });
+
+        headers: {      nextStartTimeRef.current = 0;
+
+          'Content-Type': 'application/json',      
+
+        },      const systemInstruction = `You are "ConnectAI", an expert AI HR assistant for Third Wave Coffee (TWC), designed to conduct HR Connect check-ins. Your persona is friendly, empathetic, and professional.
+
+        body: JSON.stringify({
+
+          conversation: 'User: Hello\\nAI: Hi there! How can I help you today?'**Conversation Flow & Strategy:**
+
+        }),Your primary goal is to actively guide the conversation to understand the employee's experience at TWC. Be proactive and lead the discussion by asking open-ended questions. Keep your own responses short and focused on encouraging the employee to share more.
+
+      });
+
+1.  **Opening:** Start IMMEDIATELY with a warm, open-ended question. For example: "Hi, thanks for joining this HR Connect call today. To start, could you tell me a bit about how things have been going for you recently at the store?" Do not wait for the user to speak first.
+
+      if (response.ok) {2.  **Explore Key Areas:** Gently guide the conversation through these topics. Use follow-up questions to dig deeper when appropriate.
+
+        const data = await response.json();    *   **Role & Team:** "How are you finding your day-to-day responsibilities?" or "How is the dynamic with your team and shift manager?"
+
+            *   **Challenges & Support:** "Are there any challenges you're facing that you'd like to talk about?" or "Do you feel you have the support you need from your manager and the company?"
+
+        setSentimentResult({    *   **Positives & Recognition:** "What's been a recent highlight for you at work?" or "Is there anything you're particularly proud of?"
+
+          overallSentiment: "Positive",    *   **Growth & Development:** "What are your thoughts on your career growth at TWC?" or "Have you had a chance to use our training resources on ZingLearn?"
+
+          summary: "Backend connection successful. Analysis functionality working.",3.  **Closing:** End with a wrap-up question like, "Thanks for sharing all of that. Is there anything else on your mind, big or small, that we haven't touched on?"
+
+          keyPoints: [
+
+            {**Domain Rules & Guardrails:**
+
+              point: "Backend API is responding correctly",1. **Domain Lock**: You can ONLY discuss topics related to an employee's experience at Third Wave Coffee, including their store, team, TWC programs, and HR policies. If asked about anything else, respond with: "I can only talk about your experience at Third Wave Coffee—your store, team, and TWC programs and policies."
+
+              type: "Positive",2. **Policy Expert**: You are an expert on TWC HR policies. When you answer a question using policy information, you MUST cite the source policy and section in brackets, like this: [POL-LEAVE-002 §EL].
+
+              context: "Technical Status"3. **Uncertainty**: If you cannot answer a question based on the provided policy information, you MUST say: "I couldn’t verify that in the current HR policy set. Please check with your HRBP or share the exact clause." Do not invent answers.
+
+            },4. **Safety**: You must AVOID providing legal interpretations, medical advice, or disclosing any employee's personal data.
+
+            {
+
+              point: "OpenAI integration is functional",**Key Domain Information Summary:**
+
+              type: "Positive", This is a summary of key policies. Refer to it for answering questions.
+
+              context: "AI Service"*   **Domain:** Third Wave Coffee (TWC)
+
+            }*   **Key Programs:** RESPECT values (badges for performance), ZingLearn LMS (training), Bench Planning (career growth), HR Connect (check-ins).
+
+          ]*   **Policies:**
+
+        });    *   **Leave (POL-LEAVE-002):** 24 Earned Leaves (EL) per year, 7 can be carried forward. 12-14 Flexi Leaves (FL) for various purposes.
+
+      } else {    *   **Meals (POL-MEAL-012):** Full-time store employees get two beverages and one food item per working day.
+
+        throw new Error(`Analysis endpoint responded with status: ${response.status}`);    *   **Mobile Phone (POL-MOB-014):** Phones must be handed to the Manager on Duty (MOD) during shifts.
+
+      }    *   **Working Hours (POL-WH-003):** Standard shift is 9 hours, including a 1-hour break. Employees get 4 weekly offs per month. Overtime (OT) applies if you work 30+ minutes beyond your shift.
+
+    } catch (error) {    *   **POSH (POL-POSH-005):** The POSH policy addresses sexual harassment. Complaints should be filed with the Internal Committee (IC) at posh@thirdwavecoffee.in within 3 months of an incident.
+
+      console.error('Sentiment analysis failed:', error);    *   **Attendance (POL-FAQ-015):** 4 attendance regularizations are allowed per month.
+
+      setSentimentResult({*   **Glossary:** EL (Earned Leave), FL (Flexi Leave), IC (Internal Committee), MOD (Manager on Duty), TWC (Third Wave Coffee).`;
+
+        overallSentiment: "Error",
+
+        summary: "Failed to analyze sentiment via backend.",      sessionPromiseRef.current = getAi().live.connect({
+
+        keyPoints: [],        model: 'gemini-2.5-flash-native-audio-preview-09-2025',
+
+      });        callbacks: {
+
+    } finally {          onopen: () => {
+
+      setStatus('finished');            setStatus('connected');
+
+    }            
+
+  };            // Send an initial silent packet to prompt the AI to start speaking.
+
             const silentPacket = new Float32Array(4096); 
-            const silentBlob = createPcmBlob(silentPacket);
-            sessionPromiseRef.current?.then((session) => {
-                session.sendRealtimeInput({ media: silentBlob });
-            });
 
-            const source = inputAudioContextRef.current!.createMediaStreamSource(stream);
-            mediaStreamSourceRef.current = source;
-            const scriptProcessor = inputAudioContextRef.current!.createScriptProcessor(4096, 1, 1);
-            scriptProcessorRef.current = scriptProcessor;
+  return (            const silentBlob = createPcmBlob(silentPacket);
 
-            scriptProcessor.onaudioprocess = (audioProcessingEvent) => {
-              const inputData = audioProcessingEvent.inputBuffer.getChannelData(0);
+    <div className="min-h-screen bg-slate-900 flex flex-col items-center justify-center p-4 selection:bg-sky-500 selection:text-white">            sessionPromiseRef.current?.then((session) => {
+
+      <div className="w-full max-w-4xl mx-auto flex flex-col md:flex-row gap-8">                session.sendRealtimeInput({ media: silentBlob });
+
+        {/* Left Panel: Conversation */}            });
+
+        <div className="w-full md:w-2/3 bg-slate-800/50 rounded-2xl shadow-2xl backdrop-blur-sm border border-slate-700/50 overflow-hidden flex flex-col">
+
+          <header className="p-4 border-b border-slate-700/50">            const source = inputAudioContextRef.current!.createMediaStreamSource(stream);
+
+            <h1 className="text-xl font-bold text-sky-400">TWC HR Connect</h1>            mediaStreamSourceRef.current = source;
+
+            <p className="text-sm text-slate-400">Real-time Employee Feedback (Backend Test)</p>            const scriptProcessor = inputAudioContextRef.current!.createScriptProcessor(4096, 1, 1);
+
+          </header>            scriptProcessorRef.current = scriptProcessor;
+
+          <ConversationView transcriptionHistory={transcriptionHistory} status={status} />
+
+          <ControlPanel status={status} onStart={handleStartConversation} onEnd={handleEndConversation} />            scriptProcessor.onaudioprocess = (audioProcessingEvent) => {
+
+        </div>              const inputData = audioProcessingEvent.inputBuffer.getChannelData(0);
+
               const pcmBlob = createPcmBlob(inputData);
-              sessionPromiseRef.current?.then((session) => {
-                session.sendRealtimeInput({ media: pcmBlob });
-              });
-            };
-            source.connect(scriptProcessor);
-            scriptProcessor.connect(inputAudioContextRef.current!.destination);
-          },
-          onmessage: async (message: LiveServerMessage) => {
-            if (message.serverContent?.outputTranscription) {
-              currentOutputTranscriptionRef.current += message.serverContent.outputTranscription.text;
-            }
+
+        {/* Right Panel: Analysis */}              sessionPromiseRef.current?.then((session) => {
+
+        <div className="w-full md:w-1/3 bg-slate-800/50 rounded-2xl shadow-2xl backdrop-blur-sm border border-slate-700/50 p-6 flex flex-col">                session.sendRealtimeInput({ media: pcmBlob });
+
+          <SentimentAnalysisView result={sentimentResult} status={status} />              });
+
+        </div>            };
+
+      </div>            source.connect(scriptProcessor);
+
+      <footer className="text-center mt-8 text-slate-500 text-xs">            scriptProcessor.connect(inputAudioContextRef.current!.destination);
+
+        <p>Powered by OpenAI GPT-4o-mini via GitHub Models. Backend: {API_BASE_URL}</p>          },
+
+      </footer>          onmessage: async (message: LiveServerMessage) => {
+
+    </div>            if (message.serverContent?.outputTranscription) {
+
+  );              currentOutputTranscriptionRef.current += message.serverContent.outputTranscription.text;
+
+};            }
+
             if (message.serverContent?.inputTranscription) {
-              currentInputTranscriptionRef.current += message.serverContent.inputTranscription.text;
+
+export default App;              currentInputTranscriptionRef.current += message.serverContent.inputTranscription.text;
             }
 
             if (message.serverContent?.turnComplete) {
