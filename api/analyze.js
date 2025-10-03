@@ -31,19 +31,19 @@ export default async function handler(req, res) {
       messages: [
         {
           role: 'system',
-          content: 'You are ConnectAI, an expert AI HR assistant for Third Wave Coffee (TWC). Be friendly, empathetic, and professional. Ask open-ended questions to understand the employee experience. Keep responses short and conversational.'
+          content: 'You are a sentiment analysis expert for HR. Analyze the conversation and provide a detailed sentiment analysis with overall sentiment (positive/negative/neutral), key emotions detected, and actionable insights for HR. Be concise but thorough.'
         },
         {
           role: 'user',
-          content: req.body.message || 'Hello'
+          content: req.body.text || req.body.conversation || 'No conversation provided'
         }
       ],
-      temperature: 0.7,
-      max_tokens: 150
+      temperature: 0.3,
+      max_tokens: 200
     });
 
     res.json({
-      response: response.choices[0].message.content,
+      analysis: response.choices[0].message.content,
       timestamp: new Date().toISOString(),
       status: 'success'
     });

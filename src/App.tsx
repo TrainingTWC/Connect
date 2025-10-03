@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const API_BASE_URL = 'https://hr-sentiment-analyzer-6-qnos73gl6-training-twcs-projects.vercel.app';
+const API_BASE_URL = 'https://hr-sentiment-analyzer-6-g9jwkdbf6-training-twcs-projects.vercel.app';
 
 const App = () => {
   const [message, setMessage] = useState('');
@@ -35,7 +35,8 @@ const App = () => {
 
   return (
     <div style={{ padding: '20px' }}>
-      <h1>HR Connect Test (v2)</h1>
+      <h1>HR Connect - Real AI Integration! 🤖</h1>
+      <p>Now powered by OpenAI GPT-4o-mini via GitHub Models (Free!)</p>
       <input
         type="text"
         value={message}
