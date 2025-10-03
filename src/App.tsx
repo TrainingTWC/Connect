@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const API_BASE_URL = 'https://hr-sentiment-analyzer-6-5v8a38m6h-training-twcs-projects.vercel.app';
+const API_BASE_URL = 'https://hr-sentiment-analyzer-6-qnos73gl6-training-twcs-projects.vercel.app';
 
 const App = () => {
   const [message, setMessage] = useState('');
