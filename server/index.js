@@ -6,8 +6,31 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(cors());
+// Configure CORS to allow GitHub Pages
+app.use(cors({
+  origin: [
+    'https://trainingtwc.github.io',
+    'http://localhost:3000',
+    'http://localhost:5173'
+  ],
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 app.use(express.json());
+
+// Health check endpoint
+app.get('/', (req, res) => {
+  res.json({ 
+    status: 'Server is running', 
+    timestamp: new Date().toISOString(),
+    endpoints: ['/api/chat', '/api/analyze']
+  });
+});
+
+app.get('/api/health', (req, res) => {
+  res.json({ status: 'OK', timestamp: new Date().toISOString() });
+});
 
 // Initialize OpenAI client for GitHub Models
 const openai = new OpenAI({
