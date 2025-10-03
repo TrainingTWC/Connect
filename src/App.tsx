@@ -35,7 +35,7 @@ const App = () => {
 
   return (
     <div style={{ padding: '20px' }}>
-      <h1>HR Connect Test</h1>
+      <h1>HR Connect Test (v2)</h1>
       <input
         type="text"
         value={message}
